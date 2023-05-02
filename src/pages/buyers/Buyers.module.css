@@ -1,5 +1,5 @@
 .headline {
-  font-size: 3rem;
+  font-size: 7rem;
   font-family: var(--font-serif);
   text-align: center;
   font-weight: 400;
@@ -18,4 +18,78 @@
 }
 .content :last-child {
   margin-bottom: 0;
+}
+
+.buyersCardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.buyersCard {
+  background-color: var(--dusty-aqua-light);
+  padding: 1rem;
+  border-radius: 1px;
+  border-bottom: 13px solid var(--dark-blue);
+  box-shadow: var(--grey) 18px 9px 9px;
+
+}
+
+.estateTypeStyling {
+  font-size: larger;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.familyIcon {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.familyIcon::before {
+  content: url("../../assets/icon-family.svg");
+}
+
+.sizeIcon::before {
+  content: url("../../assets/icon-min-area.svg");
+  vertical-align: middle;
+  margin-right: 16px;
+}
+
+.p {
+  font-weight: 300;
+  font-size: 0.9em;
+}
+
+
+
+
+.button {
+  padding: 0.7rem;
+  width: 8.8rem;
+  background: var(--blue);
+  color: var(--white);
+  margin-left: 2rem;
+cursor: pointer;
+border-radius: 2%;
+font-size: 1em;
+margin-left: 50rem;
+}
+.button:hover {
+  background: var(--aqua);
+}
+
+
+.checkboz{
+height: 30px;
+
+position: relative;
+display: inline-block;
+width: 20px;
+height: 20px;
+border-radius: 4px;
+border: 8px solid #000000;
+
 }

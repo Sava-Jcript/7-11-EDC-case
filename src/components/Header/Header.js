@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function Header() {
   return (
-    <header className="wrapper">
+    <header className="wrapper1">
       <Link href="/" aria-label="EDC">
         <Image
           className={styles.logo}
