@@ -3,15 +3,15 @@ import styles from "./Home.module.css";
 import { useState } from "react";
 import Selected from "@/components/Header/Selected";
 import { useContext,useRef } from "react";
-import {Router} from "next/router";
+import {useRouter} from "next/router";
 
 
 
 export default function Contact(props) {
-
+  const router = useRouter();
 const supabaseKey = process.env.SUPABASEKEY;
 const formEl= useRef(null);
-
+const { query } = useRouter();
 
   const [selectedBuyers, selectBuyers] = useState([...props.selectedList]);
 
@@ -28,16 +28,16 @@ const formEl= useRef(null);
       estateType: query.estateType,
       price: query.price,
       size: query.size,
-      buyerID: buyerID,
-      name: sellerName,
-      email: sellerEmail,
-      phone: sellerPhone,
-      allowContact: allowContact,
+      buyerID: query.buyerID,
+      name: query.sellerName,
+      email: query.sellerEmail,
+      phone: query.sellerPhone,
+      allowContact: query.allowContact,
     };
 
 
 
-  }
+  
 
   fetch("/api/newSeller", {
     method: "POST",
@@ -49,9 +49,9 @@ const formEl= useRef(null);
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      router.push("/thanks");
+      router.push("/thankyou");
     });
-
+  }
 
   return (
     <>
