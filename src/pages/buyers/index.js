@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import styles from "../../pages/buyers/Buyers.module.css";
-import { useEffect, useState } from "react";
+
 import { BuyerCard } from "@/components/Header/BuyerCard";
 
 
