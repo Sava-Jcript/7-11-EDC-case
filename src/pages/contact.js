@@ -3,7 +3,7 @@ import styles from "./Home.module.css";
 import { useState } from "react";
 import Selected from "@/components/Header/Selected";
 import { useContext,useRef } from "react";
-import Router from "next/router";
+import {Router} from "next/router";
 
 
 
@@ -23,33 +23,35 @@ const formEl= useRef(null);
 
   function submit(e) {
     e.preventDefault();
-    const fetchie = {
-      name: e.target.elements.name.value,
-      message: e.target.elements.message.value,
-      email: e.target.elements.email.value,
-      phone: e.target.elements.phone.value,
-      consent: true,
-      buyers: selectedBuyers,
+    const payload = {
+      zipCode: query.zipCode,
+      estateType: query.estateType,
+      price: query.price,
+      size: query.size,
+      buyerID: buyerID,
+      name: sellerName,
+      email: sellerEmail,
+      phone: sellerPhone,
+      allowContact: allowContact,
     };
-    console.log(fetchie);
 
-    fetchFunction(fetchie);
-  }
 
-  function fetchFunction(Buyers) {
-    fetch("https://gbaxrceynntdiffiuoum.supabase.co/rest/v1/Contact-Form", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-        Prefer: "return=representation",
-        apikey:supabaseKey,
-      },
-      body: JSON.stringify(Buyers),
-    })
-    .then((data) => data.json())
-    .then((data) => (window.location.href = "/thankyou"));
 
   }
+
+  fetch("/api/newSeller", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      router.push("/thanks");
+    });
+
 
   return (
     <>

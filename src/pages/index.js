@@ -46,7 +46,7 @@ export default function Home() {
       Welcome To <span className={styles.headline}>EDC</span> Buyer Generator 
     </h1>
         <div className={styles.content}>
-        <p>Insert Your Estate Relative Data</p>
+        <p>Insert Your  Relative Data</p>
           <form onSubmit={submitGenerator} className={styles.form}>
             
           
