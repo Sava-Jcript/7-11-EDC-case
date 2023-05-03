@@ -46,7 +46,7 @@ export default function Home() {
       Welcome To <span className={styles.headline}>EDC</span> Buyer Generator 
     </h1>
         <div className={styles.content}>
-        <p>By providing information about your property: zip code, price, size, and estate type, you're taking the first step towards understanding the market and potential buyers in your area. This information will help you get an idea of the value of your property and what kind of buyers might be interested in it. Based on this information, we can assist you in contacting potential buyers and selling your property. Our goal is to provide you with the support you need to make informed decisions about selling your property and to help you achieve a successful outcome.</p>
+        <p>By providing information about your property: zip code, price, size, and estate type, you are taking the first step towards understanding the market and potential buyers in your area. This information will help you get an idea of the value of your property and what kind of buyers might be interested in it. Based on this information, we can assist you in contacting potential buyers and selling your property. Our goal is to provide you with the support you need to make informed decisions about selling your property and to help you achieve a successful outcome.</p>
           <form onSubmit={submitGenerator} className={styles.form}>
             
           
@@ -104,3 +104,5 @@ export default function Home() {
     </>
   );
 }
+
+
