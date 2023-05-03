@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "./Home.module.css";
 import { useState, useRef } from "react";
-import Selected from "@/components/Header/Selected";
+import SelectButton from "@/components/Header/deleteFun";
 import { useRouter } from "next/router";
 
 export default function Contact(props) {
@@ -63,11 +63,11 @@ export default function Contact(props) {
             <h2>Selected Buyers</h2>
             <ul>
               {selectedBuyers.map((buyer) => (
-                <Selected
+                <SelectButton
                   {...buyer}
                   key={buyer.id}
                   removeSelectedBuyers={removeSelectedBuyers}
-                ></Selected>
+                ></SelectButton>
               ))}
             </ul>
           </div>

@@ -24,6 +24,9 @@
   border: 1px solid var(--dusty-aqua);
   margin-bottom: 1rem;
   margin-top: 3rem;
+  font-size: 1.2em;
+
+
 }
 .content :first-child {
   margin-top: 0.1;

@@ -1,4 +1,4 @@
-export default function Selected(props) {
+export default function SelectButton(props) {
   return (
     <li className="Selected" key={props.key}>
       <article>
