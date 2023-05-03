@@ -4,7 +4,7 @@ export default function Selected(props) {
       <article>
         <h1>{props.id}</h1>
         <p>{props.description}</p>
-        <button onClick={() => props.removeSelectedBuyer(props.id)}>X</button>
+        <button onClick={() => props.removeSelectedBuyers(props.id)}>X</button>
       </article>
     </li>
   );

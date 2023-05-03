@@ -7,8 +7,8 @@ import { BuyerCard } from "@/components/Header/BuyerCard";
 
 
 export default function Buyers(props) {
-  const { query } = useRouter();
 
+  const { query } = useRouter();
   const router = useRouter();
 
   function addSelected(selectedBuyer) {
@@ -22,6 +22,7 @@ export default function Buyers(props) {
   }
 
   return (
+    
     <>
       <Head>
         <title>Find Buyer  </title>

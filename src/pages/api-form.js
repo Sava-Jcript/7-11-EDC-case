@@ -4,7 +4,7 @@ export default async function handler(req, res ) {
     
     
     
-    const response= await fetch("https://gbaxrceynntdiffiuoum.supabase.co/rest/v1/Contact-Form", {
+    const response= await fetch("https://gbaxrceynntdiffiuoum.supabase.co/rest/v1/contact_form", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
