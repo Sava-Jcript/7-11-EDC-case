@@ -5,7 +5,6 @@ import styles from "../../pages/buyers/Buyers.module.css";
 import { BuyerCard } from "@/components/Header/Card";
 
 
-
 export default function Buyers(props) {
 
   const { query } = useRouter();
@@ -45,6 +44,4 @@ export default function Buyers(props) {
     </>
   );
 }
-
-
 
